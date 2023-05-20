@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="shortcut icon" href="images/gradeEngine_officialLogo.ico" type="image/x-icon">
-    <title>GradeEngine | Inicio</title>
+    <link rel="shortcut icon" href="../images/gradeEngine_officialLogo.ico" type="image/x-icon">
+    <title>GradeEngine | Calculadora de promedios</title>
 </head>
 <body>
     <header>
@@ -36,15 +36,32 @@
     <main>
         <div class="main__div-instructions">
             <h1>¡Comencemos!</h1>
-            <p>Desea guardar la información:</p>
-            <button>Sólo por esta sesión</button>
+            <p>Guardar los datos sólo por esta sesión</p>
+            <button id="btn-session">Sólo por esta sesión</button>
             <br>
-            <button>Quiero que quede almacenada para la proxima vez que ingrese</button>
+            <button id="btn-local">Guardar los datos parmenentemente</button>
         </div>
         <div class="main__div-calculator">
-            <!-- Ver video de cómo agregar la interacción mediante el DOM -->
-            <!-- La idea sería dar una tabla inicial, con la opción de ir agregando estudiantes en cada uno -->
-
+          <h2>Ingrese los datos de sus alumnos</h2>
+          <input type="button" id="table__add-student" value="Agregar nuevo alumno">
+          <table id="table__students">
+            <tr>
+              <th>Nombre</th>
+              <th>Exámen 1</th>
+              <th>Exámen 2</th>
+              <th>Exámen 3</th>
+              <th>Promedio Final</th>
+              <th>Calculemos...</th>
+            </tr>
+            <tr>
+              <td><input type="text" placeholder="Nombre del alumno" class="student_name"></td>
+              <td><input type="text" placeholder="Exámen 1" class="nota_1"></td>
+              <td><input type="text" placeholder="Exámen 2" class="nota_2"></td>
+              <td><input type="text" placeholder="Exámen 3" class="nota_3"></td>
+              <td class="promedium">Promedio</td>
+              <td><button class="calc-button">Calcular promedio</button><td>
+            </tr>
+          </table>
         </div>
     </main>
     <footer>
