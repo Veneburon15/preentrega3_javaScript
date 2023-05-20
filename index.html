@@ -1,15 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GradeSync | GradeEngine - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/gradeEngine_officialLogo.ico" type="image/x-icon">
+    <title>GradeEngine | Inicio</title>
 </head>
 <body>
-    <h1>GradeEngine</h1>
-    <h2>Bienvenido/a a la nueva plataforma de promediación web, existimos para hacerte la vida más fácil</h2>
-    <p>Comencemos!!</p>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img class="img-fluid nav__logo" src="images/gradeEngine_officialLogo.ico" alt="GradeEngine Official Logo"> 
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar__itemsdiv collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item text-center">
+                        <a class="nav-link disabled" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" aria-current="page" href="pages/promediator.html">Calculadora de promedios</a>
+                    </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <h1>Bienvenido/a a GradeEngine!</h1>
+        <h2>Existimos para hacerte la vida más fácil</h2>
+        <p>Nuestra plataforma está diseñada para simplificar y agilizar el proceso de cálculo de promedios y la organización de estudiantes para profesores como tú. Con GradeEngine, puedes decir adiós a las complicadas hojas de cálculo y los tediosos procesos manuales.</p>
+        <h3>Beneficios de GradeEngine</h3>
+        <ul>
+            <li>
+                <p>
+                    <strong>Calculadora de promedios automatizada:</strong>  Olvídate de los cálculos manuales. Nuestra aplicación realiza automáticamente los cálculos de promedios para ti, ahorrándote tiempo y minimizando errores.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Organizado de estudiantes inteligente:</strong>  Clasifica y organiza a tus estudiantes según sus notas de manera rápida y sencilla. Crea grupos personalizados y obtén una visión general clara del rendimiento de tu clase.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Interfaz intuitiva y fácil del usar:</strong>  Navega por nuestras funciones con facilidad. Hemos creado una interfaz diseñada pensando en ti, para que puedas concentrarte en lo que más importa: enseñar.
+                </p>
+            </li>
+        </ul>
+        <p>Comienza a utilizar [Nombre de tu aplicación] ahora y descubre cómo simplificar tus tareas de evaluación y seguimiento académico. </p>
+        <button type="#" href="pages/promediator.html">Comencemos a promediar!!</button>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
