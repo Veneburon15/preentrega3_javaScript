@@ -11,9 +11,9 @@ const session_button = document.getElementById("btn-session");
 const local_button = document.getElementById("btn-local");
 const regex = /^[a-zA-Z\s]+$/;
 
-
 //ARREGLO PRINCIPAL
-let estudiantes = []
+let estudiantes = [];
+let estudiantesHistorial = obtenerEstudiantesHistorial();
 
 //CLASE ALUMNO
 class Alumno {
@@ -35,11 +35,12 @@ class Alumno {
 //EVENTOS
 //Guardar en el sessionStorage
 session_button.addEventListener("click", () => {
-    sessionStorage.setItem("estudiantes", JSON.stringify(estudiantes));
+    sessionStorage.setItem("estudiantesHistorial", JSON.stringify(estudiantes));
 })
 //Guardar en el localStorage
 local_button.addEventListener("click", () => {
-    localStorage.setItem("estudiantes", JSON.stringify(estudiantes));
+    estudiantesHistorial.push(...estudiantes);
+    localStorage.setItem("estudiantesHistorial", JSON.stringify(estudiantesHistorial));
 })
 //Agregar fila de estudiante
 add_student.addEventListener("click", () => {
@@ -75,7 +76,7 @@ table.addEventListener("click", (event) => {
         }
 
         let alumno = new Alumno(nombre, nota1, nota2, nota3);
-        estudiantes.push(alumno);
+        localSaving(alumno);
         let promedioCell = currentRow.getElementsByClassName("promedium")[0];
         promedioCell.innerText = alumno.promedio;
     }
@@ -92,41 +93,33 @@ function validarNota(nota) {
     return !isNaN(nota) && nota >= 0 && nota <= 20;
 }
 
-//Solicitud de datos
-function dataSolicitation(){
-    let nombreAlumno = nameInput();
-    let nota_1 = pedirNota(1);
-    let nota_2 = pedirNota(2);
-    let nota_3 = pedirNota(3);
-    let promedio = calcularPromedio(nota_1, nota_2, nota_3);
-    studentAdd (nombreAlumno, nota_1, nota_2, nota_3, promedio);
+//Obtener los datos del localStorage
+function obtenerEstudiantesHistorial(){
+    const estudiantesHistorialJSON = localStorage.getItem("estudiantesHistorial");
+    if (estudiantesHistorialJSON) {
+        return JSON.parse(estudiantesHistorialJSON);
+    }
+    return[];
 }
-//Pedir el nombre
-function nameInput(){
-    let alumnoInput = document.querySelector('input[placeholder="Nombre del alumno"]');
-    let nombre = alumnoInput.value.trim();
-    if (!regex.test(nombre)) {
-        alert("Error: El nombre del alumno debe contener solo letras y espacios")
-        return "";
-    }
-    return nombre;
-};
-//Solicitud de nota y validación
-function pedirNota(notaNum){
-    let notaInput = document.querySelector('input[placeholder = "Exámen ${notaNum}"]');
-    let nota = Number(notaInput.value.trim());
-    if (isNaN(nota) || nota < 0 || nota > 20) {
-        alert("Error: La nota debe estar entre 0 y 20");
-        return "";
-    }
-    return nota;
-};
-//Adición de datos al arreglo
-function studentAdd(nombre, nota_1, nota_2, nota_3, promedio){
-    let estudiante = {nombre: nombre, nota1: nota_1, nota2: nota_2, nota3: nota_3, promedio: promedio};
-    estudiantes.push(estudiante);
-};
 
+//Adición del alumno al localStorage
+function localSaving (alumno) {
+    estudiantes.push(alumno);
+    estudiantesHistorial.push(alumno);
+    // // Ordenar los estudiantes por fecha (supongamos que tienes una propiedad "fecha" en cada estudiante)
+    // estudiantesHistorial.sort((a, b) => {
+    //     const dateA = new Date(a.fecha);
+    //     const dateB = new Date(b.fecha);
+    //     return dateA - dateB;
+    // });
+
+    sessionStorage.setItem("estudiantesHistorial", JSON.stringify(estudiantesHistorial));
+    //Ordenar los estudiantes por nombre
+    estudiantes.sort((a, b) => a.nombre.localeCompare(b.nombre));
+}
+
+
+// 
 
 
 
