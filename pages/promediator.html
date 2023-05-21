@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="../pages/promediator.html">
+              <a class="navbar-brand" href="promediator.html">
                 <img class="img-fluid nav__logo" src="../images/gradeEngine_officialLogo.ico" alt="GradeEngine Official Logo"> 
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,9 @@
                     <li class="nav-item text-center">
                         <a class="nav-link disabled" aria-current="page" href="promediator.html">Calculadora de promedios</a>
                     </li>
-                  </li>
+                    <li class="nav-item text-center">
+                      <a class="nav-link" aria-current="page" href="sessionMemory.html">Memoria de sesiones</a>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -35,11 +37,8 @@
     </header>
     <main>
         <div class="main__div-instructions">
-            <h1>¡Comencemos!</h1>
-            <p>Guardar los datos sólo por esta sesión</p>
-            <button id="btn-session">Sólo por esta sesión</button>
-            <br>
-            <button id="btn-local">Guardar los datos parmenentemente</button>
+          <h1>¡Comencemos!</h1>
+          <p>Guardar los datos sólo por esta sesión</p>
         </div>
         <div class="main__div-calculator">
           <h2>Ingrese los datos de sus alumnos</h2>
@@ -62,6 +61,11 @@
               <td><button class="calc-button">Calcular promedio</button><td>
             </tr>
           </table>
+        </div>
+        <div>
+          <button id="btn-session">Sólo por esta sesión</button>
+          <br>
+          <button id="btn-local">Guardar los datos parmenentemente</button>
         </div>
     </main>
     <footer>
