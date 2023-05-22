@@ -35,11 +35,10 @@ class Alumno {
 //EVENTOS
 //Guardar en el sessionStorage
 session_button.addEventListener("click", () => {
-    sessionStorage.setItem("estudiantesHistorial", JSON.stringify(estudiantes));
+    sessionStorage.setItem("estudiantes", JSON.stringify(estudiantes));
 })
 //Guardar en el localStorage
 local_button.addEventListener("click", () => {
-    estudiantesHistorial.push(...estudiantes);
     localStorage.setItem("estudiantesHistorial", JSON.stringify(estudiantesHistorial));
 })
 //Agregar fila de estudiante
@@ -76,7 +75,7 @@ table.addEventListener("click", (event) => {
         }
 
         let alumno = new Alumno(nombre, nota1, nota2, nota3);
-        localSaving(alumno);
+        storageSaving(alumno);
         let promedioCell = currentRow.getElementsByClassName("promedium")[0];
         promedioCell.innerText = alumno.promedio;
     }
@@ -103,7 +102,7 @@ function obtenerEstudiantesHistorial(){
 }
 
 //Adición del alumno al localStorage
-function localSaving (alumno) {
+function storageSaving (alumno) {
     estudiantes.push(alumno);
     estudiantesHistorial.push(alumno);
     // // Ordenar los estudiantes por fecha (supongamos que tienes una propiedad "fecha" en cada estudiante)
@@ -112,10 +111,8 @@ function localSaving (alumno) {
     //     const dateB = new Date(b.fecha);
     //     return dateA - dateB;
     // });
-
-    sessionStorage.setItem("estudiantesHistorial", JSON.stringify(estudiantesHistorial));
     //Ordenar los estudiantes por nombre
-    estudiantes.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    // estudiantes.sort((a, b) => a.nombre.localeCompare(b.nombre));
 }
 
 
@@ -192,7 +189,6 @@ function localSaving (alumno) {
 //     };
 //     alert(mensaje);
 // };
-
 
 
 // //INNECESARIO EN ESTA PREENTREGA

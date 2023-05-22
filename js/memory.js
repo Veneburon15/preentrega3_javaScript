@@ -36,9 +36,6 @@ localHTML += "</ul>";
 // Mostrar contenido del Local Storage
 localDataDiv.innerHTML = localHTML;
 
-//LOS DATOS DEL SESSION STORAGE NO SE SOBREESCRIBEN, PERO NO SE ESTAN PUDIENDO SEPARAR LOS DEL SISSISON CON LOS DEL LOCAL, ASI QUE CUANDO TOCO LOS DOS BOTONES, SE ME DUPLICAN EN EL LOCAL STORAGE
-
-
 
 // // Ordenar los estudiantes por fecha (supongamos que tienes una propiedad "fecha" en cada estudiante)
 // estudiantes.sort((a, b) => {
@@ -46,11 +43,3 @@ localDataDiv.innerHTML = localHTML;
 //   const dateB = new Date(b.fecha);
 //   return dateA - dateB;
 // });
-
-// // Generar contenido HTML para mostrar los estudiantes ordenados por fecha
-// let localHTML = "<h3>Registro Histórico Ordenado por Fecha</h3>";
-// localHTML += "<ul>";
-// estudiantes.forEach((estudiante) => {
-//   localHTML += `<li>${estudiante.nombre} - Fecha: ${estudiante.fecha}</li>`;
-// });
-// localHTML += "</ul>";
