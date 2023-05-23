@@ -12,7 +12,7 @@ const local_button = document.getElementById("btn-local");
 const regex = /^[a-zA-Z\s]+$/;
 
 //ARREGLO PRINCIPAL
-let estudiantes = [];
+let estudiantesSession = obtenerEstudiantesSessionHistorial();
 let estudiantesHistorial = obtenerEstudiantesHistorial();
 
 //CLASE ALUMNO
@@ -35,7 +35,7 @@ class Alumno {
 //EVENTOS
 //Guardar en el sessionStorage
 session_button.addEventListener("click", () => {
-    sessionStorage.setItem("estudiantes", JSON.stringify(estudiantes));
+    sessionStorage.setItem("estudiantesSession", JSON.stringify(estudiantesSession));
 })
 //Guardar en el localStorage
 local_button.addEventListener("click", () => {
@@ -92,6 +92,15 @@ function validarNota(nota) {
     return !isNaN(nota) && nota >= 0 && nota <= 20;
 }
 
+// Obtener los datos del sessionStorage
+function obtenerEstudiantesSessionHistorial(){
+    const estudiantesHistorialJSON = sessionStorage.getItem("estudiantesSession");
+    if (estudiantesHistorialJSON) {
+        return JSON.parse(estudiantesHistorialJSON);
+    }
+    return[];
+}
+
 //Obtener los datos del localStorage
 function obtenerEstudiantesHistorial(){
     const estudiantesHistorialJSON = localStorage.getItem("estudiantesHistorial");
@@ -103,7 +112,7 @@ function obtenerEstudiantesHistorial(){
 
 //Adición del alumno al localStorage
 function storageSaving (alumno) {
-    estudiantes.push(alumno);
+    estudiantesSession.push(alumno);
     estudiantesHistorial.push(alumno);
     // // Ordenar los estudiantes por fecha (supongamos que tienes una propiedad "fecha" en cada estudiante)
     // estudiantesHistorial.sort((a, b) => {

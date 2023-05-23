@@ -2,7 +2,7 @@ const sessionDataDiv = document.getElementById("session-storage-data");
 const localDataDiv = document.getElementById("local-storage-data")
 
 //SESSION STORAGE
-const sessionData = sessionStorage.getItem("estudiantes");
+const sessionData = sessionStorage.getItem("estudiantesSession");
 
 // Generar contenido HTML para el Session Storage
 let sessionHTML = "<h3>Registro de Sesión</h3>";
