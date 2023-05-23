@@ -1,0 +1,28 @@
+/** NAVBAR **/
+nav {
+	background-color: $background-color_3;
+	
+	.navbar-brand {
+		.nav__logo {
+			width: $logo-size;
+		}
+	}
+	
+	.navbar__itemsdiv {
+		justify-content: flex-end;
+		.nav-link {
+			color: black;
+			padding: 3px;
+			transition: all 1s;
+			zoom: normal;
+			border-bottom: none;
+			font-size: 1.3rem;
+			&:hover {
+				border-radius: 10px;
+				background-color: $background-color_2;
+				font-size: 1.6rem;
+			}
+		}
+		.disabled {color: $border-color_1}
+	}
+}

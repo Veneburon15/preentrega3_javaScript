@@ -1,3 +1,70 @@
+/** NAVBAR **/
+nav {
+  background-color: #9eb2d6;
+}
+nav .navbar-brand .nav__logo {
+  width: 120px;
+}
+nav .navbar__itemsdiv {
+  justify-content: flex-end;
+}
+nav .navbar__itemsdiv .nav-link {
+  color: black;
+  padding: 3px;
+  transition: all 1s;
+  zoom: normal;
+  border-bottom: none;
+  font-size: 1.3rem;
+}
+nav .navbar__itemsdiv .nav-link:hover {
+  border-radius: 10px;
+  background-color: #3264bc;
+  font-size: 1.6rem;
+}
+nav .navbar__itemsdiv .disabled {
+  color: #537cc5;
+}
 
+/*ESTILOS UNIVERSALES*/
+body {
+  background-color: #537cc5;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+}
+body h1, body h3 {
+  font-family: "Rubik Dirt", cursive;
+  margin: 10px;
+}
+body h2 {
+  font-size: 1.5rem;
+  margin: 10px;
+  font-family: "Rubik Dirt", cursive;
+}
+body h3 {
+  font-size: 1.3rem;
+}
+body .h2bottom {
+  margin-top: 15px;
+}
+body .h2sand_bottom {
+  margin-bottom: 15px;
+}
+body p {
+  font-size: 1.15rem;
+  margin: 10px 30px;
+}
+body input {
+  border-radius: 5px;
+}
+body .prom-button {
+  border-radius: 7px;
+  font-size: 1rem;
+  transition: all 1s;
+}
+body .prom-button:hover {
+  border-radius: 10px;
+  background-color: #7c9cd4;
+  font-size: 1.2rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,9 @@
+@mixin h_font {font-family: $font-family_2;
+	margin: $h_margins;
+}
+
+@mixin h2-style {
+	font-size: 1.5rem;
+    margin: 10px;
+	font-family: $font-family_2;
+}
