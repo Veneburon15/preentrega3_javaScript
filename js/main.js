@@ -199,11 +199,3 @@ function storageSaving (alumno) {
 //     alert(mensaje);
 // };
 
-
-// //INNECESARIO EN ESTA PREENTREGA
-// // CICLO PRINCIPAL
-// // let permiso = prompt ("Si desea ingresar las notas de un alumno, escriba 'Si'. De lo contrario, escriba cualquier letra para salir")
-// // while (permiso.toLowerCase() == "si"){
-// //     studentProm()
-// //     permiso = prompt("Si desea continuar promediando escriba `Si`, de lo contrario, escriba cualquier letra")
-// // };

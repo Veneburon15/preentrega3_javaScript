@@ -1,5 +1,7 @@
 const sessionDataDiv = document.getElementById("session-storage-data");
-const localDataDiv = document.getElementById("local-storage-data")
+const localDataDiv = document.getElementById("local-storage-data");
+const finalDiv = document.getElementById("final");
+const unsplashAPI = 'https://api.unsplash.com/search/photos?query=teacher&client_id=kPRGje6wBX77MKijLObZFER5LRHPIcYknI2dkgTsiVo'
 
 //SESSION STORAGE
 const sessionData = sessionStorage.getItem("estudiantesSession");
@@ -43,3 +45,32 @@ localDataDiv.innerHTML = localHTML;
 //   const dateB = new Date(b.fecha);
 //   return dateA - dateB;
 // });
+
+
+//fetch(unsplashAPI)
+// .then((response) => response.json())
+// .then((data) => {
+//   data.forEach((pic) => {
+//     let boxCreation = document.createElement("tr");
+//     boxCreation.textContent = usuario.name + ", Teléfono " + usuario.phone;
+//     finalDiv.append(boxCreation)
+    
+//   })
+// })
+
+//Oye profe, practica un pco tu ingles leyendo estas frases...
+
+const url = 'https://api.quotable.io/random'
+function getQuote() {
+  fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      Toastify({
+        text: data.content + " Author: " + data.author,
+        gravity: 'bottom',
+        position: 'left',
+	      duration: 8000,
+      }).showToast();
+    })
+}
+setInterval(getQuote, 9000);
