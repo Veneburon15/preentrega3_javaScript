@@ -42,14 +42,29 @@
     <main class="container-fluid">
         <h1>Registro de sesión</h1>
         <h2>En esta sesión se muestra una lista con toda la información (sin filtrar) de los estudiantes que ingresó</h2>
+      <section>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ordenar
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" id="ordenarMejores">Por promedios (mejores notas a peores notas)</a></li>
+            <li><a class="dropdown-item" href="#" id="ordenarPeores">Por promedios (peores notas a mejores notas)</a></li>
+          </ul>
+        </div>
         <div id="session-storage-data">
-            <p>En esta sección encontarrá los datos de los estudiantes que ingresó en esta sesión</p>
+          <p>En esta sección encontarrá los datos de los estudiantes que ingresó en esta sesión</p>
         </div>
         <div id="local-storage-data">
-            <h2>Histórico de ingresos</h2>
-            <p>En esta sección encontrará todos los datos de los estudiantes que ha ingresado en cada sesión que ha usado la app</p>
+          <h2>Histórico de ingresos</h2>
+          <p>En esta sección encontrará todos los datos de los estudiantes que ha ingresado en cada sesión que ha usado la app</p>
         </div>
-        <div id="final"></div>
+      </section>
+      <div>
+        <p>Pst... profe, practique un poco su inglés leyendo algunas frases motivacionales...</p>
+        <button id="quotesShooter">Intentémoslo</button>
+        <button id="quotesStopper">Suficiente inglés por hoy</button>
+      </div>
     </main>
     <footer>
     </footer>
