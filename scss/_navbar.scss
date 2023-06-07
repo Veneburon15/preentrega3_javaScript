@@ -11,7 +11,8 @@ nav {
 	.navbar__itemsdiv {
 		justify-content: flex-end;
 		.nav-link {
-			color: black;
+			color: $font-color_1;
+			font-weight: 300px;
 			padding: 3px;
 			transition: all 1s;
 			zoom: normal;
@@ -19,10 +20,10 @@ nav {
 			font-size: 1.3rem;
 			&:hover {
 				border-radius: 10px;
-				background-color: $background-color_2;
+				background-color: $border-color_1;
 				font-size: 1.6rem;
 			}
 		}
-		.disabled {color: $border-color_1}
+		.disabled {color: $font-colo2_2}
 	}
 }

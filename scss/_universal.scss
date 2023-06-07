@@ -7,16 +7,16 @@ body {
 	h1, h3 {@include h_font;}
 	h2 {@include h2-style;}
     h3 {font-size: 1.3rem;}
-	.h2bottom {margin-top: 15px;}
-	.h2sand_bottom {margin-bottom: 15px;}
     p {
         font-size: 1.15rem;
         margin: $paragraph_margin;
     }
+    ul {
+        list-style: none;
+    }
 
-    input {border-radius: 5px;}
 
-    .prom-button {
+    .promediate-button {
         border-radius: 7px;
         font-size: 1rem;
         transition: all 1s;

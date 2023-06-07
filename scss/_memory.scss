@@ -1,0 +1,22 @@
+.btn-secondary{
+    color: #0B44EF;
+    border-color: #0B44EF;
+}
+.btn {
+    display: inline-block;
+    margin: 6px;
+    font-size: inherit;
+    line-height: 1.42;
+    padding: 0.7em 1.4em;
+    font-weight: normal;
+    border-width: 3px;
+    border-style: solid;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: bottom;
+    position: relative;
+    transform: translate(0.5em 0.4em);
+    transition: transform;
+}
+
