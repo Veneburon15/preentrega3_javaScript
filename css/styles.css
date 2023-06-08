@@ -51,15 +51,103 @@ body p {
 body ul {
   list-style: none;
 }
-body .promediate-button {
+body .func-button {
   border-radius: 7px;
   font-size: 1rem;
   transition: all 1s;
 }
-body .promediate-button:hover {
+body .func-button:hover {
   border-radius: 10px;
   background-color: #ffb703;
   font-size: 1.2rem;
+}
+
+.index-list {
+  padding: 0%;
+  margin: 0px;
+}
+.index-list li {
+  padding: 0%;
+  margin: 0%;
+}
+
+.below-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  /**************SVG****************/
+  /* SVG animations */
+}
+.wrapper .cta {
+  display: flex;
+  padding: 7px 10px;
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  color: #edede9;
+  background: #6225E6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+}
+.wrapper .cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #ffb703;
+}
+.wrapper .cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+.wrapper .cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+.wrapper span {
+  transform: skewX(15deg);
+}
+.wrapper span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+.wrapper span svg {
+  width: 40px;
+  height: 20px;
+}
+.wrapper path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+.wrapper path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+.wrapper .cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+.wrapper .cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+.wrapper .cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+@keyframes color_anim {
+  0% {
+    fill: #edede9;
+  }
+  50% {
+    fill: #ffb703;
+  }
+  100% {
+    fill: #edede9;
+  }
 }
 
 .btn-secondary {
@@ -90,6 +178,19 @@ input {
   border-color: antiquewhite;
   border-style: solid;
   border: 3px;
+}
+
+.promediate .cta {
+  width: fit-content;
+}
+
+.button_section .upper {
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.button_section div {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

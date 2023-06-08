@@ -4,3 +4,22 @@ input {
     border-style: solid;
     border: 3px
 }
+
+.promediate {
+    .cta {
+        width: fit-content;
+    }
+}
+
+.button_section {
+    .upper{
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+
+    }
+
+}
