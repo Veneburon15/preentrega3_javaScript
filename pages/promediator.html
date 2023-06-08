@@ -45,7 +45,7 @@
         </div>
         <div class="main__div-calculator">
           <h2>Ingrese los datos de sus alumnos</h2>
-          <input class="prom-button func-button" type="button" id="table__add-student" value="Agregar nuevo alumno">
+          <a class="btn btn-2" id="table__add-student">Agregar nuevo alumno</a> 
           <table id="table__students">
             <tr>
               <th>Nombre</th>
@@ -61,7 +61,11 @@
               <td><input type="text" placeholder="Exámen 2" class="nota_2"></td>
               <td><input type="text" placeholder="Exámen 3" class="nota_3"></td>
               <td class="promedium">Promedio</td>
-              <td><button class="func-button calc-button">Calcular promedio</button><td>
+              <td>
+                <button class="calc-button">Calcular promedio
+                  <span class="icon-right after"></span>
+                </button>
+              </td> 
             </tr>
           </table>
         </div>

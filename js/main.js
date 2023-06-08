@@ -50,7 +50,11 @@ add_student.addEventListener("click", () => {
     <td><input type="text" placeholder="Exámen 2"></td>
     <td><input type="text" placeholder="Exámen 3"></td>
     <td class="promedium">Promedio</td>
-    <td><button class="calc-button">Calcular promedio</button><td>
+    <td>                
+        <button class="calc-button">Calcular promedio
+        <span class="icon-right after"></span>
+        </button>
+    </td>
     `;
     table.append(row_creation);
 });

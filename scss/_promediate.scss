@@ -1,34 +1,136 @@
-input {
-    border-radius: 5px;
-    border-color: antiquewhite;
-    border-style: solid;
-    border: 3px
-}
-
-.promediate {
-    .cta {
-        width: fit-content;
+body{
+    width: 100%;
+    tr{
+        th{
+            color: $font-color_1;
+            margin: 0;
+        }
+        td {
+            margin: 0%;
+            color: aqua;
+        }
     }
 }
 
 .button_section {
     .upper{
         gap: 20px;
-        margin-bottom: 20px;
+        margin: 20px;
     }
     div{
         display: flex;
         justify-content: center;
-
     }
-
 }
-
+///////
+/// Botón Registro
+//////
 @include btn__split;
 .container {
 	width: auto;
 	margin: auto;
 }
 
-/////////////////////////////////
+///////
+/// Botón Clacular Promedio
+//////
+.calc-button {
+    font-family: $font-family_2;
+	background-color: $btn-color_2;
+	color: white;
+	position: relative;
+	border: none;
+	height: 50px;
+	width: 190px;
+	font-size: .8em;
+	z-index: 2;
+	transition: .01s .23s ease-out all;
+	overflow: hidden;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 55%;
+		background: $btn-color_2;
+		z-index: -1;
+		transition: .3s ease-in all;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -5%;
+		top: 5%;
+		height: 90%;
+		width: 5%;
+		background: $font-colo2_2;
+		z-index: -1;
+		transition: .4s .02s ease-in all;
+	}
+	&:hover {
+		cursor: pointer;
+		color: transparent;
+		&:before {
+			left: 100%;
+			width: 25%;
+		}
+		&:after {
+			left: 100%;
+			width: 70%;
+		}
+		.icon-right.after:after {
+			left: -80px;
+			transition: .2s .2s ease all;
+		}
+	}
+}
+
+.icon-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	&:after {
+		content: '\2192';
+		font-size: 24px;
+		display: inline-block;
+		position: relative;
+		top: 26px;
+		transform: translate3D(0, -50%, 0);
+	}
+	&.after:after {
+		left: -250px;
+		color: black;
+		transition: .15s .25s ease left, .5s .05s ease color;
+	}
+}
+
+///////
+/// Botón Agregar Estudiantes
+//////
+.btn-2 {
+  color: $font-color_1;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 45px;
+  transition: all 280ms ease-in-out;
+  width: 100%; 
+
+  &:hover, &:active{letter-spacing: 5px;}
+
+  &:after, &:before {
+    border: 1px solid rgba($border-color_1, 0);
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  &:hover:after, &:hover:before {
+    width: 50%;
+    left: 0;
+  }
+}
+
 
