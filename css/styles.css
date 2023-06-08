@@ -193,4 +193,46 @@ input {
   justify-content: center;
 }
 
+.btn {
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.btn::after, .btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  transform: skewX(-30deg);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+}
+.btn::before {
+  background-color: #06d6a0;
+  top: -0.5rem;
+  left: 0rem;
+}
+.btn::after {
+  background-color: #118ab2;
+  top: 0.5rem;
+  left: 6.5rem;
+}
+.btn:hover::before, .btn:hover::after {
+  top: 0;
+  transform: skewx(0deg);
+  height: 100%;
+  width: 50%;
+}
+.btn:hover::after {
+  left: 0rem;
+}
+.btn:hover::before {
+  left: 13.75rem;
+}
+
+.container {
+  width: auto;
+  margin: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

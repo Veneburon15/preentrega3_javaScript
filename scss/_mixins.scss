@@ -8,3 +8,52 @@
 	font-size: 1.5rem;
     margin: $h_margins;
 }
+
+@mixin btn__split {
+	.btn {
+        font-family: $font-family_2;
+		font-size: 20px;
+        text-transform: uppercase;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 80%;
+			transform: skewX(-30deg);
+			transition: all 0.75s cubic-bezier(0.68, -.55, 0.265, 1.55);
+			z-index: -2;
+		}
+		&::before {
+			background-color: $btn-color_1;
+			top: -.5rem;
+			left: 0rem;
+		}
+		&::after {
+			background-color: $btn-color_2;
+			top: .5rem;
+			left: 6.5rem;
+		}
+		&:hover {
+			&::before,
+			&::after {
+				top: 0;
+				transform: skewx(0deg);
+                height: 100%;
+                width: 50%;
+			}
+			&::after {
+				left: 0rem;
+			}
+			&::before {
+				left: 13.75rem;
+			}
+		}
+	}
+}
+
+
+
+
+
+/////////
