@@ -1,16 +1,30 @@
-body{
+.table_students{
     width: 100%;
     tr{
         th{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: $font-color_1;
             margin: 0;
+            gap: 2px;
         }
         td {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0%;
-            color: aqua;
+            color:$font-color_1;
+            .student_name{
+                width: 200px;
+            }
+            .nota{
+                width: 150px;
+            }
         }
     }
 }
+
 
 .button_section {
     .upper{

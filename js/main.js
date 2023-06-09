@@ -44,24 +44,25 @@ local_button.addEventListener("click", () => {
 //Agregar fila de estudiante
 add_student.addEventListener("click", () => {
     let row_creation = document.createElement("tr");
+    row_creation.classList.add("row");
     row_creation.innerHTML = `
-    <td><input type="text" placeholder="Nombre del alumno"></td>
-    <td><input type="text" placeholder="Exámen 1"></td>
-    <td><input type="text" placeholder="Exámen 2"></td>
-    <td><input type="text" placeholder="Exámen 3"></td>
-    <td class="promedium">Promedio</td>
-    <td>                
-        <button class="calc-button">Calcular promedio
+    <td class="col-xl-2"><input type="text" placeholder="Nombre del alumno" class="student_name"></td>
+    <td class="col-xl-2"><input type="text" placeholder="Exámen 1" class="nota nota_1"></td>
+    <td class="col-xl-2"><input type="text" placeholder="Exámen 2" class="nota nota_2"></td>
+    <td class="col-xl-2"><input type="text" placeholder="Exámen 3" class="nota nota_3"></td>
+    <td class="col-xl-2 promedium">Promedio</td>
+    <td class="col-xl-2">
+      <button class="calc-button">Calcular promedio
         <span class="icon-right after"></span>
-        </button>
-    </td>
+      </button>
+    </td> 
     `;
     table.append(row_creation);
 });
 
 //Asignar eventos a los botones de cálculo
 table.addEventListener("click", (event) => {
-    if (event.target.classList.contains("calc-button")){
+    if (event.target.classList.contains("calc-button") || event.target.classList.contains("calc-button")){
         let currentRow = event.target.parentNode.parentNode;
         let inputs = currentRow.getElementsByTagName("input");
         let nombre = inputs[0].value;

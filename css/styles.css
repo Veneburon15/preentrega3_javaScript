@@ -174,16 +174,29 @@ body .func-button:hover {
   transition: transform;
 }
 
-body {
+.table_students {
   width: 100%;
 }
-body tr th {
+.table_students tr th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #023047;
   margin: 0;
+  gap: 2px;
 }
-body tr td {
+.table_students tr td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0%;
-  color: aqua;
+  color: #023047;
+}
+.table_students tr td .student_name {
+  width: 200px;
+}
+.table_students tr td .nota {
+  width: 150px;
 }
 
 .button_section .upper {
