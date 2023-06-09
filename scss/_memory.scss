@@ -1,22 +1,50 @@
-.btn-secondary{
-    color: #0B44EF;
-    border-color: #0B44EF;
-}
-.btn {
-    display: inline-block;
-    margin: 6px;
-    font-size: inherit;
-    line-height: 1.42;
-    padding: 0.7em 1.4em;
-    font-weight: normal;
-    border-width: 3px;
-    border-style: solid;
-    background: transparent;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: bottom;
-    position: relative;
-    transform: translate(0.5em 0.4em);
-    transition: transform;
+////////
+/// Botón de Filtrado
+///////
+.dropdown-menu{
+    background-color: $background-color_2;
+    .dropdown-item:hover{
+        transition: all 1s;
+        background-color: $background-color_6;
+    }
 }
 
+////////
+/// Activando librería y consumo de API
+///////
+.english_section{
+    display: flex;
+    flex-direction: column;
+    @include centering;
+}
+.container_try{
+    &::after {
+        background-color: $btn-color_2;
+        top: .5rem;
+        left: 2.5rem;
+    }
+    &:hover {
+        &::after {
+            left: 0rem;
+        }
+        &::before {
+            left: 6.1rem;
+        }
+    }
+}
+
+.container_stop{
+	&::after {
+		background-color: $btn-color_2;
+		top: .5rem;
+		left: 3.5rem;
+	}
+	&:hover {
+		&::after {
+			left: 0rem;
+		}
+		&::before {
+			left: 9.75rem;
+		}
+	}
+}

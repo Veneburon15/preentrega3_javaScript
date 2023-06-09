@@ -13,16 +13,14 @@ const url = 'https://api.quotable.io/random';
 const sessionData = sessionStorage.getItem("estudiantesSession");
 // Generar contenido HTML para el Session Storage
 let sessionHTML = "<h3>Registro de Sesión</h3>";
-sessionHTML += "<tr>";
+sessionHTML += "<ul>";
 if (sessionData) {
   const estudiantes = JSON.parse(sessionData);
   estudiantes.forEach((estudiante) => {
-    sessionHTML += `<td class="name">${estudiante.nombre}</td>
-    <td class="promedium"> Promedio: ${estudiante.promedio}</td> 
-    </br>`;
+    sessionHTML += `<li><strong>${estudiante.nombre}</strong> | <strong>Promedio:</strong> ${estudiante.promedio}</li>`;
   });
 }
-sessionHTML += "</tr>";
+sessionHTML += "</ul>";
 // Mostrar contenido del Session Storage
 sessionDataDiv.innerHTML = sessionHTML;
 
@@ -32,16 +30,14 @@ sessionDataDiv.innerHTML = sessionHTML;
 const localData = localStorage.getItem("estudiantesHistorial");
 // Generar contenido HTML para el Local Storage
 let localHTML = "<h3>Registro Histórico</h3>";
-localHTML += "<tr>";
+localHTML += "<ul>";
 if (localData) {
   const estudiantes = JSON.parse(localData);
   estudiantes.forEach((estudiante) => {
-    localHTML += `<td>${estudiante.nombre} </td>
-    <td> Promedio: ${estudiante.promedio} </td> 
-    </br>`;
+    localHTML += `<li><strong>${estudiante.nombre}</strong> | <strong>Promedio:</strong> ${estudiante.promedio} </li>`;
   });
 }
-localHTML += "</tr>";
+localHTML += "</ul>";
 // Mostrar contenido del Local Storage
 localDataDiv.innerHTML = localHTML;
 
@@ -107,11 +103,11 @@ function filtrarData(event) {
     }
 
     estudiantesLocalFiltrados.forEach((estudiante) => {
-      localHTML += `<li>${estudiante.nombre} - Promedio: ${estudiante.promedio}</li>`;
+      localHTML += `<li><strong>${estudiante.nombre}</strong> | <strong>Promedio:</strong> ${estudiante.promedio}</li>`;
     });
 
     estudiantesSessionFiltrados.forEach((estudiante) => {
-      sessionHTML += `<li>${estudiante.nombre} - Promedio: ${estudiante.promedio}</li>`;
+      sessionHTML += `<li><strong>${estudiante.nombre}</strong> | <strong>Promedio:</strong> ${estudiante.promedio}</li>`;
     });
   }
 

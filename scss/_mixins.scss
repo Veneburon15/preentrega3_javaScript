@@ -11,6 +11,21 @@
 
 @mixin btn__split {
 	.btn {
+		display: inline-block;
+		margin: 6px;
+		font-size: inherit;
+		line-height: 1.42;
+		padding: 0.7em 1.4em;
+		font-weight: normal;
+		border-width: 3px;
+		border-style: solid;
+		background: transparent;
+		cursor: pointer;
+		user-select: none;
+		vertical-align: bottom;
+		position: relative;
+		transform: translate(0.5em 0.4em);
+		transition: transform;
         font-family: $font-family_2;
 		font-size: 20px;
         text-transform: uppercase;
@@ -52,8 +67,8 @@
 	}
 }
 
-
-
-
-
-/////////
+@mixin centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

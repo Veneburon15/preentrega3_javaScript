@@ -43,13 +43,13 @@
         <h1>Registro de sesión</h1>
         <h2>En esta sesión se muestra una lista con toda la información (sin filtrar) de los estudiantes que ingresó</h2>
       <section>
-        <div class="dropdown">
-          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ordenar
-          </button>
+        <button class="dropdown-toggle calc-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ordenar
+          <span class="icon-right after"></span>
+        </button>
+        <div >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" id="ordenarMejores">Por promedios (mejores notas a peores notas)</a></li>
-            <li><a class="dropdown-item" href="#" id="ordenarPeores">Por promedios (peores notas a mejores notas)</a></li>
+            <li><a class="dropdown-item" id="ordenarMejores">Por promedios (mejores notas a peores notas)</a></li>
+            <li><a class="dropdown-item" id="ordenarPeores">Por promedios (peores notas a mejores notas)</a></li>
           </ul>
         </div>
         <div id="session-storage-data">
@@ -60,11 +60,13 @@
           <p>En esta sección encontrará todos los datos de los estudiantes que ha ingresado en cada sesión que ha usado la app</p>
         </div>
       </section>
-      <div>
-        <p>Pst... profe, practique un poco su inglés leyendo algunas frases motivacionales...</p>
-        <button class="btn container_try" id="quotesShooter">Intentémoslo</button>
-        <button class="btn container_stop" id="quotesStopper">Suficiente inglés por hoy</button>
-      </div>
+      <section class="english_section">
+        <p><strong>Pst... profe, practique un poco su inglés leyendo algunas frases motivacionales...</strong></p>
+        <div class="english_practice">
+          <button class="btn container_try" id="quotesShooter">Intentémoslo</button>
+          <button class="btn container_stop" id="quotesStopper">Suficiente inglés por hoy</button>
+        </div>
+      </section>
     </main>
     <footer>
       <!-- designed by me... enjoy! -->
